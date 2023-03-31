@@ -116,7 +116,7 @@ PRODUCT_PACKAGES += \
     libvsomeip_cfg \
     libvsomeip_sd
 ```
-
+----------------
 ##### Build Instructions for Visual Studio 2019/2022 IDE
 
 ```
