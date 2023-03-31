@@ -147,7 +147,8 @@ cmake ..
 # and set accordingly the value for "Platform Toolset". For example, "Visual Studio 2019 (v142)".  
 # Then build of these projects should produce their corresponding DLLs.
 
-# Build "application_test" and "Set As Startup Project". Locate and copy the following DLLs and put beside this exe:
+# Build "application_test" and "Set As Startup Project". Locate and copy the following DLLs and 
+# put beside this exe:
 vsomeip3-cfg.dll
 vsomeip3-e2e.dll
 vsomeip3-sd.dll
