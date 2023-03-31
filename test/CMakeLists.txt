@@ -3229,7 +3229,7 @@ else()
 endif()
 
 # some tests require the routingmanagerd
-add_dependencies(build_tests routingmanagerd)
+# add_dependencies(build_tests routingmanagerd)
 
 ##############################################################################
 # Add tests

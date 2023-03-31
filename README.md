@@ -116,3 +116,45 @@ PRODUCT_PACKAGES += \
     libvsomeip_cfg \
     libvsomeip_sd
 ```
+
+##### Build Instructions for Visual Studio 2019/2022 IDE
+
+```
+cd /d/
+mkdir -p src/dxlab/ local 
+
+# Download, double-click then install to D:\local\boost_1_76_0\
+wget https://boost.teeks99.com/bin/1.76.0/boost_1_76_0-msvc-14.2-64.exe 
+
+# Clone two github repositories
+cd src/dxlab/
+git clone https://github.com/google/googletest.git
+git clone https://github.com/daparic/vsomeip.git
+
+# Open DOS "Visual Studio Development Command Prompt for VS2019"
+set BOOST_ROOT=D:\local\boost_1_76_0\
+set BOOST_INCLUDEDIR=D:\local\boost_1_76_0\
+set BOOST_LIBRARYDIR=D:\local\boost_1_76_0\lib64-msvc-14.2
+set GTEST_ROOT=D:\src\dxlab\googletest\
+cd vsomeip
+git checkout dxlab
+mkdir build/
+cd build
+cmake ..
+
+# Open Visual Studio 2019 IDE and open the generated vsomeip.sln solution file
+# Select projects together: vsomeip_ctrl, vsomeip3, vsomeip3-cfg, vsomeip3-e2e, vsomeip3-sd, ZERO_CHECK
+# and set accordingly the value for "Platform Toolset". For example, "Visual Studio 2019 (v142)".  
+# Then build of these projects should produce their corresponding DLLs.
+
+# Build "application_test" and "Set As Startup Project". Locate and copy the following DLLs and put beside this exe:
+vsomeip3-cfg.dll
+vsomeip3-e2e.dll
+vsomeip3-sd.dll
+vsomeip3.dll
+boost_filesystem-vc142-mt-gd-x64-1_76.dll
+
+# Set breakpoints in application_test.cpp and press F5 to start debugging.
+```
+
+
