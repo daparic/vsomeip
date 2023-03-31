@@ -119,9 +119,9 @@ PRODUCT_PACKAGES += \
 ----------------
 ##### Build Instructions for Visual Studio 2019/2022 IDE
 
-[https://www.parasoft.com/products/parasoft-c-ctest/](Parasoft C/C++test] is a unified, fully
-integrated testing solution for complex C/C++ software development. It works on [https://code.visualstudio.com/](vscode),
-[https://visualstudio.microsoft.com/vs/community/](Visual Studio IDE), command line/vim and Eclipse IDEs. It does:
+[Parasoft C/C++test](https://www.parasoft.com/products/parasoft-c-ctest/) is a unified, fully
+integrated testing solution for complex C/C++ software development. It works on [vscode](https://code.visualstudio.com/),
+[Visual Studio IDE](https://visualstudio.microsoft.com/vs/community/), command line/vim and Eclipse IDEs. It does:
 - static analysis (pattern, flow, metrics)
 - autogenerate unit tests
 - 9 types of code coverages: function, line, statement, block, path, decision, simple condition, MC/DC, call
